@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	//Elabore un programa en cualquier lenguaje que elija un número aleatorio n entre 1 y 100. El programa dará al usuario 5 oportunidades para adivinar el número: en cada oportunidad, el usuario ingresará su respuesta y el programa indicará si la respuesta es menor, mayor, igual a n (en cuyo caso el usuario habrá ganado). Después de 5 intentos el usuario no ha adivinado, entonces habrá perdido el juego
+
+	var aleatorio = Math.floor(Math.random() * ((100+1) - 1) + 1);
+	var nUsuario = 0;
+	console.log("el numero aleatorio es:" + aleatorio);
+	
+	for (i=0; i<5; i++){
+		nUsuario = 0;
+		nUsuario = parseInt(prompt("Dame el número " + (i+1) + "° oportunidad"));
+		if (nUsuario > aleatorio) {
+			console.log("El numero que ingresaste es mayor");
+		}
+		
+		if (nUsuario < aleatorio) {
+			console.log("El numero que ingresaste es menor");
+		}
+
+		if (nUsuario == aleatorio) {
+			console.log("Ganaste");
+			i=5;
+		}
+
+	}
+
+	</script>
+</body>
+</html>
